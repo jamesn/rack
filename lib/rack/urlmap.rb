@@ -65,7 +65,7 @@ module Rack
         return app.call(env)
       end
 
-      [404, {"Content-Type" => "text/plain", "X-Cascade" => "pass"}, ["Not Found: #{path}"]]
+      [404, {"Content-Type" => "text/plain", "X-Cascade" => "pass"}, ["Not Found."]]
 
     ensure
       env['PATH_INFO'] = path
